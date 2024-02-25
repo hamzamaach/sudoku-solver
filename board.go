@@ -2,23 +2,23 @@ package piscine
 
 import "fmt"
 
-type Board [9][9]int
-
-func NewEmptyBoard() Board {
-	var board Board
-	return board
-}
-
-func PrintBoard(board Board) {
-	for x := 0; x < 9; x++ {
-		for y := 0; y < 9; y++ {
-			if y == 8 {
-				fmt.Print(board[x][y])
-			} else {
-				fmt.Print(board[x][y], " ")
+func PrintBoard(args []string) {
+	for i, elem := range args {
+		if i > 0 {
+			for j, char := range elem {
+				if char == '.' {
+					fmt.Printf("o")
+					if j < 8 {
+						fmt.Printf(" ")
+					}
+				} else {
+					fmt.Printf(string(char))
+					if j < 8 {
+						fmt.Printf(" ")
+					}
+				}
 			}
+			fmt.Printf(string('\n'))
 		}
-		fmt.Println()
 	}
 }
-

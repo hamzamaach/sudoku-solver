@@ -1,8 +1,11 @@
 package main
 
-import "piscine"
+import (
+	"os"
+	"piscine"
+)
 
 func main() {
-	board := piscine.NewEmptyBoard()
-	piscine.PrintBoard(board)
+	args:=os.Args
+	piscine.PrintBoard(args)
 }
