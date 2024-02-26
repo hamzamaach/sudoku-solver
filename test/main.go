@@ -7,26 +7,14 @@ import (
 )
 
 func main() {
+	// vérifier si les arguments donnée est valide
 	err := piscine.VirifyArgs(os.Args)
 	if err {
 		fmt.Println("Error")
 		return
 	}
-
-	grid := make([][]int, 9)
-	for i := range grid {
-		grid[i] = make([]int, 9)
-		for j, char := range os.Args[i+1] {
-			if char == '.' {
-				grid[i][j] = 0
-			} else if char >= '1' && char <= '9' {
-				grid[i][j] = int(char - '0')
-			} else {
-				fmt.Println("Error")
-				return
-			}
-		}
-	}
+	// convert args (type dyalhom []string) given to grid (type dyalo [][]int)
+	grid := piscine.ConvertToGrid(os.Args)
 
 	if piscine.Solve(grid) {
 		piscine.PrintBoard(grid)
