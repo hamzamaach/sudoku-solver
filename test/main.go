@@ -29,12 +29,7 @@ func main() {
 	}
 
 	if piscine.Solve(grid) {
-		for _, row := range grid {
-			for _, num := range row {
-				fmt.Printf("%d ", num)
-			}
-			fmt.Println()
-		}
+		piscine.PrintBoard(grid)
 	} else {
 		fmt.Println("Error")
 	}
