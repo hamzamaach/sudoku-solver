@@ -1,7 +1,3 @@
-Here's an example of a README file for the Sudoku solver program:
-
----
-
 # Sudoku Solver
 
 This program solves a Sudoku puzzle. A valid Sudoku has only one possible solution.
@@ -55,7 +51,7 @@ Error$
 
 ## Requirements
 
-- Go 1.x or higher.
+- Go 1.19 .
 
 ## How to Run
 
@@ -68,9 +64,3 @@ Error$
 - If you encounter any issues, ensure you are providing valid Sudoku puzzles as input.
 - Check that each row contains exactly 9 characters.
 - Verify the usage syntax and inputs according to the examples.
-
-## License
-
-[Add your license here if you have one]
-
----
